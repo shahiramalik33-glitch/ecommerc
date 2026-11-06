@@ -65,7 +65,7 @@ Guidelines:
     }
 
     // Function to call Gemini API with given model
-    async function callGemini(modelName: string) {
+    const callGemini = async (modelName: string) => {
       const cleanModel = modelName.replace(/^models\//, "");
       const url = `https://generativelanguage.googleapis.com/v1beta/models/${cleanModel}:generateContent?key=${apiKey}`;
 
